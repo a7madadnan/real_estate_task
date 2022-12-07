@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-const kYTextStyle = TextStyle(fontSize: 25, fontWeight: FontWeight.bold);
+const kYTextStyle = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+);
 const kYTextStyle2 = TextStyle(
   fontSize: 14,
+);
+const kYTextStyle3 = TextStyle(
+  fontSize: 18,
+  color: Color(0xff035050),
 );
 
 class ApiDocument {

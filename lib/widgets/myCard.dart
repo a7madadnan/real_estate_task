@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:untitled2/models/real_estate/real_estate.dart';
 
@@ -34,7 +33,7 @@ class ReCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
                           image: NetworkImage(realEstate.image!),
-                          fit: BoxFit.fitWidth)),
+                          fit: BoxFit.cover)),
                 ),
                 Positioned(
                   top: 130,
@@ -43,7 +42,7 @@ class ReCard extends StatelessWidget {
                     children: [
                       const Icon(
                         Icons.location_on,
-                        color: Colors.white,
+                        color: Color(0xff035050),
                       ),
                       Text(
                         realEstate.city!.name!,
@@ -76,22 +75,37 @@ class ReCard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text('${realEstate.nofBedrooms} :عدد غرف النوم',
-                    style: kYTextStyle2),
-                Text('${realEstate.nofLivingRooms} :عدد غرف المعيشة',
-                    style: kYTextStyle2),
-                Text('${realEstate.nofBathRooms} :عدد الحمامات',
-                    style: kYTextStyle2),
+                const Text('غرف النوم', style: kYTextStyle2),
+                Text(
+                  '${realEstate.nofBedrooms}',
+                  style: kYTextStyle3,
+                ),
+                const Text('غرف المعيشة', style: kYTextStyle2),
+                Text(
+                  '${realEstate.nofLivingRooms}',
+                  style: kYTextStyle3,
+                ),
+                const Text('الحمامات', style: kYTextStyle2),
+                Text(
+                  '${realEstate.nofBathRooms}',
+                  style: kYTextStyle3,
+                ),
               ],
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(realEstate.title!, style: kYTextStyle),
+                Text(
+                  realEstate.title!,
+                  style: kYTextStyle,
+                  textAlign: TextAlign.center,
+                ),
+                const Text('العمر', style: kYTextStyle3),
                 Text(realEstate.age.toString(), style: kYTextStyle),
+                const Text('المساحة', style: kYTextStyle3),
                 Text(realEstate.area.toString(), style: kYTextStyle),
               ],
             ),
