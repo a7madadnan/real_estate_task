@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-
 import 'package:flutter/foundation.dart';
 
 final networkHelper = NetworkHelper();
@@ -21,8 +20,6 @@ class NetworkHelper {
           queryParameters: {
             "skip": pageNumber,
             "take": pageSize,
-            "currency": "IQD",
-            "offerType": "SELL"
           });
       if (kDebugMode) {
         print(response.data);

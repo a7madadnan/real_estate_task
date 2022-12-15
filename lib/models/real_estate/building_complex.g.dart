@@ -8,12 +8,12 @@ part of 'building_complex.dart';
 
 _$_BuildingComplex _$$_BuildingComplexFromJson(Map<String, dynamic> json) =>
     _$_BuildingComplex(
-      buildingComplexId: json['buildingComplexId'],
-      image: json['image'],
-      commNameAr: json['commNameAr'],
-      commNameEn: json['commNameEn'],
-      lng: json['lng'],
-      lat: json['lat'],
+      buildingComplexId: json['buildingComplexId'] as String?,
+      image: json['image'] as String?,
+      commNameAr: json['commNameAr'] as String?,
+      commNameEn: json['commNameEn'] as String?,
+      lng: (json['lng'] as num?)?.toDouble(),
+      lat: (json['lat'] as num?)?.toDouble(),
       district: json['district'] == null
           ? null
           : District.fromJson(json['district'] as Map<String, dynamic>),

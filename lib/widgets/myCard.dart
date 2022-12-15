@@ -36,6 +36,30 @@ class ReCard extends StatelessWidget {
                           fit: BoxFit.cover)),
                 ),
                 Positioned(
+                  top: 20,
+                  left: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Colors.white54,
+                    ),
+                    child: Text(realEstate.offerType!.getName(context),
+                        style: kYTextStyle3),
+                  ),
+                ),
+                Positioned(
+                  top: 50,
+                  left: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Colors.white54,
+                    ),
+                    child: Text(realEstate.user!.role!.name!.getName(context),
+                        style: kYTextStyle3),
+                  ),
+                ),
+                Positioned(
                   top: 130,
                   left: 20,
                   child: Row(
@@ -105,6 +129,7 @@ class ReCard extends StatelessWidget {
                 ),
                 const Text('العمر', style: kYTextStyle3),
                 Text(realEstate.age.toString(), style: kYTextStyle),
+                // (realEstate.offerType == OfferType.sell) ? "SELL" : "RENT"
                 const Text('المساحة', style: kYTextStyle3),
                 Text(realEstate.area.toString(), style: kYTextStyle),
               ],

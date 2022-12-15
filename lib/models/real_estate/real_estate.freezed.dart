@@ -22,33 +22,33 @@ RealEstate _$RealEstateFromJson(Map<String, dynamic> json) {
 mixin _$RealEstate {
   String? get id => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
-  dynamic get realestatePlanSubscription => throw _privateConstructorUsedError;
-  dynamic get area => throw _privateConstructorUsedError;
-  dynamic get age => throw _privateConstructorUsedError;
-  dynamic get nofLivingRooms => throw _privateConstructorUsedError;
-  dynamic get nofBedrooms => throw _privateConstructorUsedError;
-  dynamic get nofBathRooms => throw _privateConstructorUsedError;
-  dynamic get parkingCapacity => throw _privateConstructorUsedError;
-  String? get offerType => throw _privateConstructorUsedError;
+  String? get realestatePlanSubscription => throw _privateConstructorUsedError;
+  int? get area => throw _privateConstructorUsedError;
+  int? get age => throw _privateConstructorUsedError;
+  int? get nofLivingRooms => throw _privateConstructorUsedError;
+  int? get nofBedrooms => throw _privateConstructorUsedError;
+  int? get nofBathRooms => throw _privateConstructorUsedError;
+  int? get parkingCapacity => throw _privateConstructorUsedError;
+  OfferType? get offerType => throw _privateConstructorUsedError;
   int? get price => throw _privateConstructorUsedError;
-  dynamic get lat => throw _privateConstructorUsedError;
-  dynamic get lng => throw _privateConstructorUsedError;
+  double? get lat => throw _privateConstructorUsedError;
+  double? get lng => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   User? get user => throw _privateConstructorUsedError;
-  District? get district => throw _privateConstructorUsedError;
-  City? get city => throw _privateConstructorUsedError;
-  Category? get category => throw _privateConstructorUsedError;
-  Subcategory? get subcategory => throw _privateConstructorUsedError;
+  Position? get district => throw _privateConstructorUsedError;
+  Position? get city => throw _privateConstructorUsedError;
+  Position? get category => throw _privateConstructorUsedError;
+  Position? get subcategory => throw _privateConstructorUsedError;
   bool? get isFavorite => throw _privateConstructorUsedError;
   bool? get isSeen => throw _privateConstructorUsedError;
   bool? get isSold => throw _privateConstructorUsedError;
   bool? get myRealestate => throw _privateConstructorUsedError;
-  dynamic get buildingComplexId => throw _privateConstructorUsedError;
+  String? get buildingComplexId => throw _privateConstructorUsedError;
   BuildingComplex? get buildingComplex => throw _privateConstructorUsedError;
   String? get avenueName => throw _privateConstructorUsedError;
   String? get nearestPoint => throw _privateConstructorUsedError;
-  dynamic get expiresAt => throw _privateConstructorUsedError;
-  dynamic get imagesCount => throw _privateConstructorUsedError;
+  int? get expiresAt => throw _privateConstructorUsedError;
+  int? get imagesCount => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -66,40 +66,40 @@ abstract class $RealEstateCopyWith<$Res> {
   $Res call(
       {String? id,
       String? title,
-      dynamic realestatePlanSubscription,
-      dynamic area,
-      dynamic age,
-      dynamic nofLivingRooms,
-      dynamic nofBedrooms,
-      dynamic nofBathRooms,
-      dynamic parkingCapacity,
-      String? offerType,
+      String? realestatePlanSubscription,
+      int? area,
+      int? age,
+      int? nofLivingRooms,
+      int? nofBedrooms,
+      int? nofBathRooms,
+      int? parkingCapacity,
+      OfferType? offerType,
       int? price,
-      dynamic lat,
-      dynamic lng,
+      double? lat,
+      double? lng,
       DateTime? createdAt,
       User? user,
-      District? district,
-      City? city,
-      Category? category,
-      Subcategory? subcategory,
+      Position? district,
+      Position? city,
+      Position? category,
+      Position? subcategory,
       bool? isFavorite,
       bool? isSeen,
       bool? isSold,
       bool? myRealestate,
-      dynamic buildingComplexId,
+      String? buildingComplexId,
       BuildingComplex? buildingComplex,
       String? avenueName,
       String? nearestPoint,
-      dynamic expiresAt,
-      dynamic imagesCount,
+      int? expiresAt,
+      int? imagesCount,
       String? image});
 
   $UserCopyWith<$Res>? get user;
-  $DistrictCopyWith<$Res>? get district;
-  $CityCopyWith<$Res>? get city;
-  $CategoryCopyWith<$Res>? get category;
-  $SubcategoryCopyWith<$Res>? get subcategory;
+  $PositionCopyWith<$Res>? get district;
+  $PositionCopyWith<$Res>? get city;
+  $PositionCopyWith<$Res>? get category;
+  $PositionCopyWith<$Res>? get subcategory;
   $BuildingComplexCopyWith<$Res>? get buildingComplex;
 }
 
@@ -159,35 +159,35 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
       realestatePlanSubscription: freezed == realestatePlanSubscription
           ? _value.realestatePlanSubscription
           : realestatePlanSubscription // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       age: freezed == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       nofLivingRooms: freezed == nofLivingRooms
           ? _value.nofLivingRooms
           : nofLivingRooms // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       nofBedrooms: freezed == nofBedrooms
           ? _value.nofBedrooms
           : nofBedrooms // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       nofBathRooms: freezed == nofBathRooms
           ? _value.nofBathRooms
           : nofBathRooms // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       parkingCapacity: freezed == parkingCapacity
           ? _value.parkingCapacity
           : parkingCapacity // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       offerType: freezed == offerType
           ? _value.offerType
           : offerType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as OfferType?,
       price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
@@ -195,11 +195,11 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -211,19 +211,19 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
       district: freezed == district
           ? _value.district
           : district // ignore: cast_nullable_to_non_nullable
-              as District?,
+              as Position?,
       city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
-              as City?,
+              as Position?,
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as Category?,
+              as Position?,
       subcategory: freezed == subcategory
           ? _value.subcategory
           : subcategory // ignore: cast_nullable_to_non_nullable
-              as Subcategory?,
+              as Position?,
       isFavorite: freezed == isFavorite
           ? _value.isFavorite
           : isFavorite // ignore: cast_nullable_to_non_nullable
@@ -243,7 +243,7 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
       buildingComplexId: freezed == buildingComplexId
           ? _value.buildingComplexId
           : buildingComplexId // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       buildingComplex: freezed == buildingComplex
           ? _value.buildingComplex
           : buildingComplex // ignore: cast_nullable_to_non_nullable
@@ -259,11 +259,11 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       imagesCount: freezed == imagesCount
           ? _value.imagesCount
           : imagesCount // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -285,48 +285,48 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
 
   @override
   @pragma('vm:prefer-inline')
-  $DistrictCopyWith<$Res>? get district {
+  $PositionCopyWith<$Res>? get district {
     if (_value.district == null) {
       return null;
     }
 
-    return $DistrictCopyWith<$Res>(_value.district!, (value) {
+    return $PositionCopyWith<$Res>(_value.district!, (value) {
       return _then(_value.copyWith(district: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CityCopyWith<$Res>? get city {
+  $PositionCopyWith<$Res>? get city {
     if (_value.city == null) {
       return null;
     }
 
-    return $CityCopyWith<$Res>(_value.city!, (value) {
+    return $PositionCopyWith<$Res>(_value.city!, (value) {
       return _then(_value.copyWith(city: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CategoryCopyWith<$Res>? get category {
+  $PositionCopyWith<$Res>? get category {
     if (_value.category == null) {
       return null;
     }
 
-    return $CategoryCopyWith<$Res>(_value.category!, (value) {
+    return $PositionCopyWith<$Res>(_value.category!, (value) {
       return _then(_value.copyWith(category: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SubcategoryCopyWith<$Res>? get subcategory {
+  $PositionCopyWith<$Res>? get subcategory {
     if (_value.subcategory == null) {
       return null;
     }
 
-    return $SubcategoryCopyWith<$Res>(_value.subcategory!, (value) {
+    return $PositionCopyWith<$Res>(_value.subcategory!, (value) {
       return _then(_value.copyWith(subcategory: value) as $Val);
     });
   }
@@ -355,45 +355,45 @@ abstract class _$$_RealEstateCopyWith<$Res>
   $Res call(
       {String? id,
       String? title,
-      dynamic realestatePlanSubscription,
-      dynamic area,
-      dynamic age,
-      dynamic nofLivingRooms,
-      dynamic nofBedrooms,
-      dynamic nofBathRooms,
-      dynamic parkingCapacity,
-      String? offerType,
+      String? realestatePlanSubscription,
+      int? area,
+      int? age,
+      int? nofLivingRooms,
+      int? nofBedrooms,
+      int? nofBathRooms,
+      int? parkingCapacity,
+      OfferType? offerType,
       int? price,
-      dynamic lat,
-      dynamic lng,
+      double? lat,
+      double? lng,
       DateTime? createdAt,
       User? user,
-      District? district,
-      City? city,
-      Category? category,
-      Subcategory? subcategory,
+      Position? district,
+      Position? city,
+      Position? category,
+      Position? subcategory,
       bool? isFavorite,
       bool? isSeen,
       bool? isSold,
       bool? myRealestate,
-      dynamic buildingComplexId,
+      String? buildingComplexId,
       BuildingComplex? buildingComplex,
       String? avenueName,
       String? nearestPoint,
-      dynamic expiresAt,
-      dynamic imagesCount,
+      int? expiresAt,
+      int? imagesCount,
       String? image});
 
   @override
   $UserCopyWith<$Res>? get user;
   @override
-  $DistrictCopyWith<$Res>? get district;
+  $PositionCopyWith<$Res>? get district;
   @override
-  $CityCopyWith<$Res>? get city;
+  $PositionCopyWith<$Res>? get city;
   @override
-  $CategoryCopyWith<$Res>? get category;
+  $PositionCopyWith<$Res>? get category;
   @override
-  $SubcategoryCopyWith<$Res>? get subcategory;
+  $PositionCopyWith<$Res>? get subcategory;
   @override
   $BuildingComplexCopyWith<$Res>? get buildingComplex;
 }
@@ -452,35 +452,35 @@ class __$$_RealEstateCopyWithImpl<$Res>
       realestatePlanSubscription: freezed == realestatePlanSubscription
           ? _value.realestatePlanSubscription
           : realestatePlanSubscription // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       age: freezed == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       nofLivingRooms: freezed == nofLivingRooms
           ? _value.nofLivingRooms
           : nofLivingRooms // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       nofBedrooms: freezed == nofBedrooms
           ? _value.nofBedrooms
           : nofBedrooms // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       nofBathRooms: freezed == nofBathRooms
           ? _value.nofBathRooms
           : nofBathRooms // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       parkingCapacity: freezed == parkingCapacity
           ? _value.parkingCapacity
           : parkingCapacity // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       offerType: freezed == offerType
           ? _value.offerType
           : offerType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as OfferType?,
       price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
@@ -488,11 +488,11 @@ class __$$_RealEstateCopyWithImpl<$Res>
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -504,19 +504,19 @@ class __$$_RealEstateCopyWithImpl<$Res>
       district: freezed == district
           ? _value.district
           : district // ignore: cast_nullable_to_non_nullable
-              as District?,
+              as Position?,
       city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
-              as City?,
+              as Position?,
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as Category?,
+              as Position?,
       subcategory: freezed == subcategory
           ? _value.subcategory
           : subcategory // ignore: cast_nullable_to_non_nullable
-              as Subcategory?,
+              as Position?,
       isFavorite: freezed == isFavorite
           ? _value.isFavorite
           : isFavorite // ignore: cast_nullable_to_non_nullable
@@ -536,7 +536,7 @@ class __$$_RealEstateCopyWithImpl<$Res>
       buildingComplexId: freezed == buildingComplexId
           ? _value.buildingComplexId
           : buildingComplexId // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       buildingComplex: freezed == buildingComplex
           ? _value.buildingComplex
           : buildingComplex // ignore: cast_nullable_to_non_nullable
@@ -552,11 +552,11 @@ class __$$_RealEstateCopyWithImpl<$Res>
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       imagesCount: freezed == imagesCount
           ? _value.imagesCount
           : imagesCount // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -608,39 +608,39 @@ class _$_RealEstate implements _RealEstate {
   @override
   final String? title;
   @override
-  final dynamic realestatePlanSubscription;
+  final String? realestatePlanSubscription;
   @override
-  final dynamic area;
+  final int? area;
   @override
-  final dynamic age;
+  final int? age;
   @override
-  final dynamic nofLivingRooms;
+  final int? nofLivingRooms;
   @override
-  final dynamic nofBedrooms;
+  final int? nofBedrooms;
   @override
-  final dynamic nofBathRooms;
+  final int? nofBathRooms;
   @override
-  final dynamic parkingCapacity;
+  final int? parkingCapacity;
   @override
-  final String? offerType;
+  final OfferType? offerType;
   @override
   final int? price;
   @override
-  final dynamic lat;
+  final double? lat;
   @override
-  final dynamic lng;
+  final double? lng;
   @override
   final DateTime? createdAt;
   @override
   final User? user;
   @override
-  final District? district;
+  final Position? district;
   @override
-  final City? city;
+  final Position? city;
   @override
-  final Category? category;
+  final Position? category;
   @override
-  final Subcategory? subcategory;
+  final Position? subcategory;
   @override
   final bool? isFavorite;
   @override
@@ -650,7 +650,7 @@ class _$_RealEstate implements _RealEstate {
   @override
   final bool? myRealestate;
   @override
-  final dynamic buildingComplexId;
+  final String? buildingComplexId;
   @override
   final BuildingComplex? buildingComplex;
   @override
@@ -658,9 +658,9 @@ class _$_RealEstate implements _RealEstate {
   @override
   final String? nearestPoint;
   @override
-  final dynamic expiresAt;
+  final int? expiresAt;
   @override
-  final dynamic imagesCount;
+  final int? imagesCount;
   @override
   final String? image;
 
@@ -676,23 +676,25 @@ class _$_RealEstate implements _RealEstate {
             other is _$_RealEstate &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            const DeepCollectionEquality().equals(
-                other.realestatePlanSubscription, realestatePlanSubscription) &&
-            const DeepCollectionEquality().equals(other.area, area) &&
-            const DeepCollectionEquality().equals(other.age, age) &&
-            const DeepCollectionEquality()
-                .equals(other.nofLivingRooms, nofLivingRooms) &&
-            const DeepCollectionEquality()
-                .equals(other.nofBedrooms, nofBedrooms) &&
-            const DeepCollectionEquality()
-                .equals(other.nofBathRooms, nofBathRooms) &&
-            const DeepCollectionEquality()
-                .equals(other.parkingCapacity, parkingCapacity) &&
+            (identical(other.realestatePlanSubscription,
+                    realestatePlanSubscription) ||
+                other.realestatePlanSubscription ==
+                    realestatePlanSubscription) &&
+            (identical(other.area, area) || other.area == area) &&
+            (identical(other.age, age) || other.age == age) &&
+            (identical(other.nofLivingRooms, nofLivingRooms) ||
+                other.nofLivingRooms == nofLivingRooms) &&
+            (identical(other.nofBedrooms, nofBedrooms) ||
+                other.nofBedrooms == nofBedrooms) &&
+            (identical(other.nofBathRooms, nofBathRooms) ||
+                other.nofBathRooms == nofBathRooms) &&
+            (identical(other.parkingCapacity, parkingCapacity) ||
+                other.parkingCapacity == parkingCapacity) &&
             (identical(other.offerType, offerType) ||
                 other.offerType == offerType) &&
             (identical(other.price, price) || other.price == price) &&
-            const DeepCollectionEquality().equals(other.lat, lat) &&
-            const DeepCollectionEquality().equals(other.lng, lng) &&
+            (identical(other.lat, lat) || other.lat == lat) &&
+            (identical(other.lng, lng) || other.lng == lng) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.user, user) || other.user == user) &&
@@ -709,17 +711,18 @@ class _$_RealEstate implements _RealEstate {
             (identical(other.isSold, isSold) || other.isSold == isSold) &&
             (identical(other.myRealestate, myRealestate) ||
                 other.myRealestate == myRealestate) &&
-            const DeepCollectionEquality()
-                .equals(other.buildingComplexId, buildingComplexId) &&
+            (identical(other.buildingComplexId, buildingComplexId) ||
+                other.buildingComplexId == buildingComplexId) &&
             (identical(other.buildingComplex, buildingComplex) ||
                 other.buildingComplex == buildingComplex) &&
             (identical(other.avenueName, avenueName) ||
                 other.avenueName == avenueName) &&
             (identical(other.nearestPoint, nearestPoint) ||
                 other.nearestPoint == nearestPoint) &&
-            const DeepCollectionEquality().equals(other.expiresAt, expiresAt) &&
-            const DeepCollectionEquality()
-                .equals(other.imagesCount, imagesCount) &&
+            (identical(other.expiresAt, expiresAt) ||
+                other.expiresAt == expiresAt) &&
+            (identical(other.imagesCount, imagesCount) ||
+                other.imagesCount == imagesCount) &&
             (identical(other.image, image) || other.image == image));
   }
 
@@ -729,17 +732,17 @@ class _$_RealEstate implements _RealEstate {
         runtimeType,
         id,
         title,
-        const DeepCollectionEquality().hash(realestatePlanSubscription),
-        const DeepCollectionEquality().hash(area),
-        const DeepCollectionEquality().hash(age),
-        const DeepCollectionEquality().hash(nofLivingRooms),
-        const DeepCollectionEquality().hash(nofBedrooms),
-        const DeepCollectionEquality().hash(nofBathRooms),
-        const DeepCollectionEquality().hash(parkingCapacity),
+        realestatePlanSubscription,
+        area,
+        age,
+        nofLivingRooms,
+        nofBedrooms,
+        nofBathRooms,
+        parkingCapacity,
         offerType,
         price,
-        const DeepCollectionEquality().hash(lat),
-        const DeepCollectionEquality().hash(lng),
+        lat,
+        lng,
         createdAt,
         user,
         district,
@@ -750,12 +753,12 @@ class _$_RealEstate implements _RealEstate {
         isSeen,
         isSold,
         myRealestate,
-        const DeepCollectionEquality().hash(buildingComplexId),
+        buildingComplexId,
         buildingComplex,
         avenueName,
         nearestPoint,
-        const DeepCollectionEquality().hash(expiresAt),
-        const DeepCollectionEquality().hash(imagesCount),
+        expiresAt,
+        imagesCount,
         image
       ]);
 
@@ -777,33 +780,33 @@ abstract class _RealEstate implements RealEstate {
   factory _RealEstate(
       {final String? id,
       final String? title,
-      final dynamic realestatePlanSubscription,
-      final dynamic area,
-      final dynamic age,
-      final dynamic nofLivingRooms,
-      final dynamic nofBedrooms,
-      final dynamic nofBathRooms,
-      final dynamic parkingCapacity,
-      final String? offerType,
+      final String? realestatePlanSubscription,
+      final int? area,
+      final int? age,
+      final int? nofLivingRooms,
+      final int? nofBedrooms,
+      final int? nofBathRooms,
+      final int? parkingCapacity,
+      final OfferType? offerType,
       final int? price,
-      final dynamic lat,
-      final dynamic lng,
+      final double? lat,
+      final double? lng,
       final DateTime? createdAt,
       final User? user,
-      final District? district,
-      final City? city,
-      final Category? category,
-      final Subcategory? subcategory,
+      final Position? district,
+      final Position? city,
+      final Position? category,
+      final Position? subcategory,
       final bool? isFavorite,
       final bool? isSeen,
       final bool? isSold,
       final bool? myRealestate,
-      final dynamic buildingComplexId,
+      final String? buildingComplexId,
       final BuildingComplex? buildingComplex,
       final String? avenueName,
       final String? nearestPoint,
-      final dynamic expiresAt,
-      final dynamic imagesCount,
+      final int? expiresAt,
+      final int? imagesCount,
       final String? image}) = _$_RealEstate;
 
   factory _RealEstate.fromJson(Map<String, dynamic> json) =
@@ -814,39 +817,39 @@ abstract class _RealEstate implements RealEstate {
   @override
   String? get title;
   @override
-  dynamic get realestatePlanSubscription;
+  String? get realestatePlanSubscription;
   @override
-  dynamic get area;
+  int? get area;
   @override
-  dynamic get age;
+  int? get age;
   @override
-  dynamic get nofLivingRooms;
+  int? get nofLivingRooms;
   @override
-  dynamic get nofBedrooms;
+  int? get nofBedrooms;
   @override
-  dynamic get nofBathRooms;
+  int? get nofBathRooms;
   @override
-  dynamic get parkingCapacity;
+  int? get parkingCapacity;
   @override
-  String? get offerType;
+  OfferType? get offerType;
   @override
   int? get price;
   @override
-  dynamic get lat;
+  double? get lat;
   @override
-  dynamic get lng;
+  double? get lng;
   @override
   DateTime? get createdAt;
   @override
   User? get user;
   @override
-  District? get district;
+  Position? get district;
   @override
-  City? get city;
+  Position? get city;
   @override
-  Category? get category;
+  Position? get category;
   @override
-  Subcategory? get subcategory;
+  Position? get subcategory;
   @override
   bool? get isFavorite;
   @override
@@ -856,7 +859,7 @@ abstract class _RealEstate implements RealEstate {
   @override
   bool? get myRealestate;
   @override
-  dynamic get buildingComplexId;
+  String? get buildingComplexId;
   @override
   BuildingComplex? get buildingComplex;
   @override
@@ -864,9 +867,9 @@ abstract class _RealEstate implements RealEstate {
   @override
   String? get nearestPoint;
   @override
-  dynamic get expiresAt;
+  int? get expiresAt;
   @override
-  dynamic get imagesCount;
+  int? get imagesCount;
   @override
   String? get image;
   @override

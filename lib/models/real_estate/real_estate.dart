@@ -1,47 +1,68 @@
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 import 'building_complex.dart';
-import 'category.dart';
-import 'city.dart';
-import 'district.dart';
-import 'subcategory.dart';
+import 'position.dart';
 import 'user.dart';
 
 part 'real_estate.freezed.dart';
 part 'real_estate.g.dart';
+
+abstract class TypeEnum {
+  String getName(BuildContext context);
+}
+
+enum OfferType implements TypeEnum {
+  @JsonValue('SELL')
+  sell,
+  @JsonValue('RENT')
+  rent,
+  unknown;
+
+  @override
+  String getName(BuildContext context) {
+    switch (this) {
+      case sell:
+        return "Sell";
+      case rent:
+        return "Rent";
+      case unknown:
+        return "";
+    }
+  }
+}
 
 @freezed
 class RealEstate with _$RealEstate {
   factory RealEstate({
     String? id,
     String? title,
-    dynamic realestatePlanSubscription,
-    dynamic area,
-    dynamic age,
-    dynamic nofLivingRooms,
-    dynamic nofBedrooms,
-    dynamic nofBathRooms,
-    dynamic parkingCapacity,
-    String? offerType,
+    String? realestatePlanSubscription,
+    int? area,
+    int? age,
+    int? nofLivingRooms,
+    int? nofBedrooms,
+    int? nofBathRooms,
+    int? parkingCapacity,
+    OfferType? offerType,
     int? price,
-    dynamic lat,
-    dynamic lng,
+    double? lat,
+    double? lng,
     DateTime? createdAt,
     User? user,
-    District? district,
-    City? city,
-    Category? category,
-    Subcategory? subcategory,
+    Position? district,
+    Position? city,
+    Position? category,
+    Position? subcategory,
     bool? isFavorite,
     bool? isSeen,
     bool? isSold,
     bool? myRealestate,
-    dynamic buildingComplexId,
+    String? buildingComplexId,
     BuildingComplex? buildingComplex,
     String? avenueName,
     String? nearestPoint,
-    dynamic expiresAt,
-    dynamic imagesCount,
+    int? expiresAt,
+    int? imagesCount,
     String? image,
   }) = _RealEstate;
 

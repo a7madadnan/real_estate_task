@@ -9,10 +9,10 @@ part of 'user.dart';
 _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       id: json['id'] as String?,
       firstname: json['firstname'] as String?,
-      secondname: json['secondname'],
-      commNameEn: json['commNameEn'],
-      commNameAr: json['commNameAr'],
-      phoneNumbers: json['phoneNumbers'],
+      secondname: json['secondname'] as String?,
+      commNameEn: json['commNameEn'] as String?,
+      commNameAr: json['commNameAr'] as String?,
+      phoneNumbers: json['phoneNumbers'] as int?,
       username: json['username'] as String?,
       role: json['role'] == null
           ? null

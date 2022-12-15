@@ -10,17 +10,17 @@ _$_RealEstate _$$_RealEstateFromJson(Map<String, dynamic> json) =>
     _$_RealEstate(
       id: json['id'] as String?,
       title: json['title'] as String?,
-      realestatePlanSubscription: json['realestatePlanSubscription'],
-      area: json['area'],
-      age: json['age'],
-      nofLivingRooms: json['nofLivingRooms'],
-      nofBedrooms: json['nofBedrooms'],
-      nofBathRooms: json['nofBathRooms'],
-      parkingCapacity: json['parkingCapacity'],
-      offerType: json['offerType'] as String?,
+      realestatePlanSubscription: json['realestatePlanSubscription'] as String?,
+      area: json['area'] as int?,
+      age: json['age'] as int?,
+      nofLivingRooms: json['nofLivingRooms'] as int?,
+      nofBedrooms: json['nofBedrooms'] as int?,
+      nofBathRooms: json['nofBathRooms'] as int?,
+      parkingCapacity: json['parkingCapacity'] as int?,
+      offerType: $enumDecodeNullable(_$OfferTypeEnumMap, json['offerType']),
       price: json['price'] as int?,
-      lat: json['lat'],
-      lng: json['lng'],
+      lat: (json['lat'] as num?)?.toDouble(),
+      lng: (json['lng'] as num?)?.toDouble(),
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
@@ -29,29 +29,29 @@ _$_RealEstate _$$_RealEstateFromJson(Map<String, dynamic> json) =>
           : User.fromJson(json['user'] as Map<String, dynamic>),
       district: json['district'] == null
           ? null
-          : District.fromJson(json['district'] as Map<String, dynamic>),
+          : Position.fromJson(json['district'] as Map<String, dynamic>),
       city: json['city'] == null
           ? null
-          : City.fromJson(json['city'] as Map<String, dynamic>),
+          : Position.fromJson(json['city'] as Map<String, dynamic>),
       category: json['category'] == null
           ? null
-          : Category.fromJson(json['category'] as Map<String, dynamic>),
+          : Position.fromJson(json['category'] as Map<String, dynamic>),
       subcategory: json['subcategory'] == null
           ? null
-          : Subcategory.fromJson(json['subcategory'] as Map<String, dynamic>),
+          : Position.fromJson(json['subcategory'] as Map<String, dynamic>),
       isFavorite: json['isFavorite'] as bool?,
       isSeen: json['isSeen'] as bool?,
       isSold: json['isSold'] as bool?,
       myRealestate: json['myRealestate'] as bool?,
-      buildingComplexId: json['buildingComplexId'],
+      buildingComplexId: json['buildingComplexId'] as String?,
       buildingComplex: json['buildingComplex'] == null
           ? null
           : BuildingComplex.fromJson(
               json['buildingComplex'] as Map<String, dynamic>),
       avenueName: json['avenueName'] as String?,
       nearestPoint: json['nearestPoint'] as String?,
-      expiresAt: json['expiresAt'],
-      imagesCount: json['imagesCount'],
+      expiresAt: json['expiresAt'] as int?,
+      imagesCount: json['imagesCount'] as int?,
       image: json['image'] as String?,
     );
 
@@ -66,7 +66,7 @@ Map<String, dynamic> _$$_RealEstateToJson(_$_RealEstate instance) =>
       'nofBedrooms': instance.nofBedrooms,
       'nofBathRooms': instance.nofBathRooms,
       'parkingCapacity': instance.parkingCapacity,
-      'offerType': instance.offerType,
+      'offerType': _$OfferTypeEnumMap[instance.offerType],
       'price': instance.price,
       'lat': instance.lat,
       'lng': instance.lng,
@@ -88,3 +88,9 @@ Map<String, dynamic> _$$_RealEstateToJson(_$_RealEstate instance) =>
       'imagesCount': instance.imagesCount,
       'image': instance.image,
     };
+
+const _$OfferTypeEnumMap = {
+  OfferType.sell: 'SELL',
+  OfferType.rent: 'RENT',
+  OfferType.unknown: 'unknown',
+};
