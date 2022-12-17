@@ -60,7 +60,7 @@ class ReCard extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 130,
+                  top: 140,
                   left: 20,
                   child: Row(
                     children: [
@@ -68,9 +68,13 @@ class ReCard extends StatelessWidget {
                         Icons.location_on,
                         color: Color(0xff035050),
                       ),
-                      Text(
-                        realEstate.city!.name!,
-                        style: const TextStyle(color: Colors.white),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3),
+                          color: Colors.white54,
+                        ),
+                        child: Text(realEstate.district!.name!,
+                            style: kYTextStyle2),
                       ),
                     ],
                   ),
@@ -84,9 +88,13 @@ class ReCard extends StatelessWidget {
                         Icons.money,
                         color: Colors.white,
                       ),
-                      Text(
-                        realEstate.price.toString(),
-                        style: const TextStyle(color: Colors.white),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3),
+                          color: Colors.white54,
+                        ),
+                        child: Text(realEstate.price.toString(),
+                            style: kYTextStyle2),
                       ),
                     ],
                   ),
@@ -129,7 +137,6 @@ class ReCard extends StatelessWidget {
                 ),
                 const Text('العمر', style: kYTextStyle3),
                 Text(realEstate.age.toString(), style: kYTextStyle),
-                // (realEstate.offerType == OfferType.sell) ? "SELL" : "RENT"
                 const Text('المساحة', style: kYTextStyle3),
                 Text(realEstate.area.toString(), style: kYTextStyle),
               ],
