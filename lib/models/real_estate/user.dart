@@ -10,10 +10,10 @@ class User with _$User {
   factory User({
     String? id,
     String? firstname,
-    dynamic secondname,
-    dynamic commNameEn,
-    dynamic commNameAr,
-    dynamic phoneNumbers,
+    String? secondname,
+    String? commNameEn,
+    String? commNameAr,
+    int? phoneNumbers,
     String? username,
     Role? role,
   }) = _User;

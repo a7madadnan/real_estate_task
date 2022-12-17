@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'subcategory.dart';
+part of 'position.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,34 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Subcategory _$SubcategoryFromJson(Map<String, dynamic> json) {
-  return _Subcategory.fromJson(json);
+Position _$PositionFromJson(Map<String, dynamic> json) {
+  return _Position.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Subcategory {
+mixin _$Position {
   String? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubcategoryCopyWith<Subcategory> get copyWith =>
+  $PositionCopyWith<Position> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SubcategoryCopyWith<$Res> {
-  factory $SubcategoryCopyWith(
-          Subcategory value, $Res Function(Subcategory) then) =
-      _$SubcategoryCopyWithImpl<$Res, Subcategory>;
+abstract class $PositionCopyWith<$Res> {
+  factory $PositionCopyWith(Position value, $Res Function(Position) then) =
+      _$PositionCopyWithImpl<$Res, Position>;
   @useResult
   $Res call({String? id, String? name});
 }
 
 /// @nodoc
-class _$SubcategoryCopyWithImpl<$Res, $Val extends Subcategory>
-    implements $SubcategoryCopyWith<$Res> {
-  _$SubcategoryCopyWithImpl(this._value, this._then);
+class _$PositionCopyWithImpl<$Res, $Val extends Position>
+    implements $PositionCopyWith<$Res> {
+  _$PositionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -68,22 +67,21 @@ class _$SubcategoryCopyWithImpl<$Res, $Val extends Subcategory>
 }
 
 /// @nodoc
-abstract class _$$_SubcategoryCopyWith<$Res>
-    implements $SubcategoryCopyWith<$Res> {
-  factory _$$_SubcategoryCopyWith(
-          _$_Subcategory value, $Res Function(_$_Subcategory) then) =
-      __$$_SubcategoryCopyWithImpl<$Res>;
+abstract class _$$_PositionCopyWith<$Res> implements $PositionCopyWith<$Res> {
+  factory _$$_PositionCopyWith(
+          _$_Position value, $Res Function(_$_Position) then) =
+      __$$_PositionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? id, String? name});
 }
 
 /// @nodoc
-class __$$_SubcategoryCopyWithImpl<$Res>
-    extends _$SubcategoryCopyWithImpl<$Res, _$_Subcategory>
-    implements _$$_SubcategoryCopyWith<$Res> {
-  __$$_SubcategoryCopyWithImpl(
-      _$_Subcategory _value, $Res Function(_$_Subcategory) _then)
+class __$$_PositionCopyWithImpl<$Res>
+    extends _$PositionCopyWithImpl<$Res, _$_Position>
+    implements _$$_PositionCopyWith<$Res> {
+  __$$_PositionCopyWithImpl(
+      _$_Position _value, $Res Function(_$_Position) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +90,7 @@ class __$$_SubcategoryCopyWithImpl<$Res>
     Object? id = freezed,
     Object? name = freezed,
   }) {
-    return _then(_$_Subcategory(
+    return _then(_$_Position(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -107,11 +105,11 @@ class __$$_SubcategoryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Subcategory implements _Subcategory {
-  _$_Subcategory({this.id, this.name});
+class _$_Position implements _Position {
+  _$_Position({this.id, this.name});
 
-  factory _$_Subcategory.fromJson(Map<String, dynamic> json) =>
-      _$$_SubcategoryFromJson(json);
+  factory _$_Position.fromJson(Map<String, dynamic> json) =>
+      _$$_PositionFromJson(json);
 
   @override
   final String? id;
@@ -120,14 +118,14 @@ class _$_Subcategory implements _Subcategory {
 
   @override
   String toString() {
-    return 'Subcategory(id: $id, name: $name)';
+    return 'Position(id: $id, name: $name)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Subcategory &&
+            other is _$_Position &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name));
   }
@@ -139,22 +137,21 @@ class _$_Subcategory implements _Subcategory {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SubcategoryCopyWith<_$_Subcategory> get copyWith =>
-      __$$_SubcategoryCopyWithImpl<_$_Subcategory>(this, _$identity);
+  _$$_PositionCopyWith<_$_Position> get copyWith =>
+      __$$_PositionCopyWithImpl<_$_Position>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubcategoryToJson(
+    return _$$_PositionToJson(
       this,
     );
   }
 }
 
-abstract class _Subcategory implements Subcategory {
-  factory _Subcategory({final String? id, final String? name}) = _$_Subcategory;
+abstract class _Position implements Position {
+  factory _Position({final String? id, final String? name}) = _$_Position;
 
-  factory _Subcategory.fromJson(Map<String, dynamic> json) =
-      _$_Subcategory.fromJson;
+  factory _Position.fromJson(Map<String, dynamic> json) = _$_Position.fromJson;
 
   @override
   String? get id;
@@ -162,6 +159,6 @@ abstract class _Subcategory implements Subcategory {
   String? get name;
   @override
   @JsonKey(ignore: true)
-  _$$_SubcategoryCopyWith<_$_Subcategory> get copyWith =>
+  _$$_PositionCopyWith<_$_Position> get copyWith =>
       throw _privateConstructorUsedError;
 }

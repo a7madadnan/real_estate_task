@@ -20,7 +20,7 @@ Role _$RoleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Role {
-  String? get name => throw _privateConstructorUsedError;
+  Name? get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -32,7 +32,7 @@ abstract class $RoleCopyWith<$Res> {
   factory $RoleCopyWith(Role value, $Res Function(Role) then) =
       _$RoleCopyWithImpl<$Res, Role>;
   @useResult
-  $Res call({String? name});
+  $Res call({Name? name});
 }
 
 /// @nodoc
@@ -54,7 +54,7 @@ class _$RoleCopyWithImpl<$Res, $Val extends Role>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Name?,
     ) as $Val);
   }
 }
@@ -65,7 +65,7 @@ abstract class _$$_RoleCopyWith<$Res> implements $RoleCopyWith<$Res> {
       __$$_RoleCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? name});
+  $Res call({Name? name});
 }
 
 /// @nodoc
@@ -83,7 +83,7 @@ class __$$_RoleCopyWithImpl<$Res> extends _$RoleCopyWithImpl<$Res, _$_Role>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Name?,
     ));
   }
 }
@@ -96,7 +96,7 @@ class _$_Role implements _Role {
   factory _$_Role.fromJson(Map<String, dynamic> json) => _$$_RoleFromJson(json);
 
   @override
-  final String? name;
+  final Name? name;
 
   @override
   String toString() {
@@ -130,12 +130,12 @@ class _$_Role implements _Role {
 }
 
 abstract class _Role implements Role {
-  factory _Role({final String? name}) = _$_Role;
+  factory _Role({final Name? name}) = _$_Role;
 
   factory _Role.fromJson(Map<String, dynamic> json) = _$_Role.fromJson;
 
   @override
-  String? get name;
+  Name? get name;
   @override
   @JsonKey(ignore: true)
   _$$_RoleCopyWith<_$_Role> get copyWith => throw _privateConstructorUsedError;

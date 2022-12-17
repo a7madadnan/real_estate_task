@@ -20,12 +20,12 @@ BuildingComplex _$BuildingComplexFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BuildingComplex {
-  dynamic get buildingComplexId => throw _privateConstructorUsedError;
-  dynamic get image => throw _privateConstructorUsedError;
-  dynamic get commNameAr => throw _privateConstructorUsedError;
-  dynamic get commNameEn => throw _privateConstructorUsedError;
-  dynamic get lng => throw _privateConstructorUsedError;
-  dynamic get lat => throw _privateConstructorUsedError;
+  String? get buildingComplexId => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
+  String? get commNameAr => throw _privateConstructorUsedError;
+  String? get commNameEn => throw _privateConstructorUsedError;
+  double? get lng => throw _privateConstructorUsedError;
+  double? get lat => throw _privateConstructorUsedError;
   District? get district => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -41,12 +41,12 @@ abstract class $BuildingComplexCopyWith<$Res> {
       _$BuildingComplexCopyWithImpl<$Res, BuildingComplex>;
   @useResult
   $Res call(
-      {dynamic buildingComplexId,
-      dynamic image,
-      dynamic commNameAr,
-      dynamic commNameEn,
-      dynamic lng,
-      dynamic lat,
+      {String? buildingComplexId,
+      String? image,
+      String? commNameAr,
+      String? commNameEn,
+      double? lng,
+      double? lat,
       District? district});
 
   $DistrictCopyWith<$Res>? get district;
@@ -77,27 +77,27 @@ class _$BuildingComplexCopyWithImpl<$Res, $Val extends BuildingComplex>
       buildingComplexId: freezed == buildingComplexId
           ? _value.buildingComplexId
           : buildingComplexId // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       commNameAr: freezed == commNameAr
           ? _value.commNameAr
           : commNameAr // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       commNameEn: freezed == commNameEn
           ? _value.commNameEn
           : commNameEn // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       district: freezed == district
           ? _value.district
           : district // ignore: cast_nullable_to_non_nullable
@@ -127,12 +127,12 @@ abstract class _$$_BuildingComplexCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic buildingComplexId,
-      dynamic image,
-      dynamic commNameAr,
-      dynamic commNameEn,
-      dynamic lng,
-      dynamic lat,
+      {String? buildingComplexId,
+      String? image,
+      String? commNameAr,
+      String? commNameEn,
+      double? lng,
+      double? lat,
       District? district});
 
   @override
@@ -162,27 +162,27 @@ class __$$_BuildingComplexCopyWithImpl<$Res>
       buildingComplexId: freezed == buildingComplexId
           ? _value.buildingComplexId
           : buildingComplexId // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       commNameAr: freezed == commNameAr
           ? _value.commNameAr
           : commNameAr // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       commNameEn: freezed == commNameEn
           ? _value.commNameEn
           : commNameEn // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       district: freezed == district
           ? _value.district
           : district // ignore: cast_nullable_to_non_nullable
@@ -207,17 +207,17 @@ class _$_BuildingComplex implements _BuildingComplex {
       _$$_BuildingComplexFromJson(json);
 
   @override
-  final dynamic buildingComplexId;
+  final String? buildingComplexId;
   @override
-  final dynamic image;
+  final String? image;
   @override
-  final dynamic commNameAr;
+  final String? commNameAr;
   @override
-  final dynamic commNameEn;
+  final String? commNameEn;
   @override
-  final dynamic lng;
+  final double? lng;
   @override
-  final dynamic lat;
+  final double? lat;
   @override
   final District? district;
 
@@ -231,30 +231,23 @@ class _$_BuildingComplex implements _BuildingComplex {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BuildingComplex &&
-            const DeepCollectionEquality()
-                .equals(other.buildingComplexId, buildingComplexId) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality()
-                .equals(other.commNameAr, commNameAr) &&
-            const DeepCollectionEquality()
-                .equals(other.commNameEn, commNameEn) &&
-            const DeepCollectionEquality().equals(other.lng, lng) &&
-            const DeepCollectionEquality().equals(other.lat, lat) &&
+            (identical(other.buildingComplexId, buildingComplexId) ||
+                other.buildingComplexId == buildingComplexId) &&
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.commNameAr, commNameAr) ||
+                other.commNameAr == commNameAr) &&
+            (identical(other.commNameEn, commNameEn) ||
+                other.commNameEn == commNameEn) &&
+            (identical(other.lng, lng) || other.lng == lng) &&
+            (identical(other.lat, lat) || other.lat == lat) &&
             (identical(other.district, district) ||
                 other.district == district));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(buildingComplexId),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(commNameAr),
-      const DeepCollectionEquality().hash(commNameEn),
-      const DeepCollectionEquality().hash(lng),
-      const DeepCollectionEquality().hash(lat),
-      district);
+  int get hashCode => Object.hash(runtimeType, buildingComplexId, image,
+      commNameAr, commNameEn, lng, lat, district);
 
   @JsonKey(ignore: true)
   @override
@@ -272,29 +265,29 @@ class _$_BuildingComplex implements _BuildingComplex {
 
 abstract class _BuildingComplex implements BuildingComplex {
   factory _BuildingComplex(
-      {final dynamic buildingComplexId,
-      final dynamic image,
-      final dynamic commNameAr,
-      final dynamic commNameEn,
-      final dynamic lng,
-      final dynamic lat,
+      {final String? buildingComplexId,
+      final String? image,
+      final String? commNameAr,
+      final String? commNameEn,
+      final double? lng,
+      final double? lat,
       final District? district}) = _$_BuildingComplex;
 
   factory _BuildingComplex.fromJson(Map<String, dynamic> json) =
       _$_BuildingComplex.fromJson;
 
   @override
-  dynamic get buildingComplexId;
+  String? get buildingComplexId;
   @override
-  dynamic get image;
+  String? get image;
   @override
-  dynamic get commNameAr;
+  String? get commNameAr;
   @override
-  dynamic get commNameEn;
+  String? get commNameEn;
   @override
-  dynamic get lng;
+  double? get lng;
   @override
-  dynamic get lat;
+  double? get lat;
   @override
   District? get district;
   @override
