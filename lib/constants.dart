@@ -5,7 +5,7 @@ const kYTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 const kYTextStyle2 = TextStyle(
-  fontSize: 14,
+  fontSize: 13,
 );
 const kYTextStyle3 = TextStyle(
   fontSize: 18,

@@ -1,7 +1,9 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:untitled2/models/real_estate/real_estate.dart';
 
 import '../constants.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ReCard extends StatelessWidget {
   const ReCard({
@@ -32,7 +34,7 @@ class ReCard extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: NetworkImage(realEstate.image!),
+                          image: CachedNetworkImageProvider(realEstate.image!),
                           fit: BoxFit.cover)),
                 ),
                 Positioned(
@@ -43,8 +45,10 @@ class ReCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(3),
                       color: Colors.white54,
                     ),
-                    child: Text(realEstate.offerType!.getName(context),
-                        style: kYTextStyle3),
+                    child: Text(
+                      realEstate.offerType?.getName(context) ?? '',
+                      style: kYTextStyle2,
+                    ),
                   ),
                 ),
                 Positioned(
@@ -55,8 +59,10 @@ class ReCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(3),
                       color: Colors.white54,
                     ),
-                    child: Text(realEstate.user!.role!.name!.getName(context),
-                        style: kYTextStyle3),
+                    child: Text(
+                      realEstate.user!.role!.name!.getName(context),
+                      style: kYTextStyle2,
+                    ),
                   ),
                 ),
                 Positioned(
@@ -73,8 +79,8 @@ class ReCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(3),
                           color: Colors.white54,
                         ),
-                        child: Text(realEstate.district!.name!,
-                            style: kYTextStyle2),
+                        child:
+                            Text(realEstate.city!.name!, style: kYTextStyle2),
                       ),
                     ],
                   ),
@@ -109,17 +115,17 @@ class ReCard extends StatelessWidget {
               children: [
                 const Text('غرف النوم', style: kYTextStyle2),
                 Text(
-                  '${realEstate.nofBedrooms}',
+                  '${realEstate.nofBedrooms ?? 0}',
                   style: kYTextStyle3,
                 ),
                 const Text('غرف المعيشة', style: kYTextStyle2),
                 Text(
-                  '${realEstate.nofLivingRooms}',
+                  '${realEstate.nofLivingRooms ?? 0}',
                   style: kYTextStyle3,
                 ),
                 const Text('الحمامات', style: kYTextStyle2),
                 Text(
-                  '${realEstate.nofBathRooms}',
+                  '${realEstate.nofBathRooms ?? 0}',
                   style: kYTextStyle3,
                 ),
               ],
@@ -136,9 +142,9 @@ class ReCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const Text('العمر', style: kYTextStyle3),
-                Text(realEstate.age.toString(), style: kYTextStyle),
+                Text('${realEstate.age ?? 0}', style: kYTextStyle),
                 const Text('المساحة', style: kYTextStyle3),
-                Text(realEstate.area.toString(), style: kYTextStyle),
+                Text('${realEstate.area ?? 0}', style: kYTextStyle),
               ],
             ),
           ),

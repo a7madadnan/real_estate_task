@@ -1,7 +1,6 @@
-// ignore: depend_on_referenced_packages
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../district.dart';
+import 'district.dart';
 
 part 'building_complex.freezed.dart';
 part 'building_complex.g.dart';

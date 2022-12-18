@@ -25,7 +25,7 @@ mixin _$User {
   String? get secondname => throw _privateConstructorUsedError;
   String? get commNameEn => throw _privateConstructorUsedError;
   String? get commNameAr => throw _privateConstructorUsedError;
-  int? get phoneNumbers => throw _privateConstructorUsedError;
+  dynamic get phoneNumbers => throw _privateConstructorUsedError;
   String? get username => throw _privateConstructorUsedError;
   Role? get role => throw _privateConstructorUsedError;
 
@@ -45,7 +45,7 @@ abstract class $UserCopyWith<$Res> {
       String? secondname,
       String? commNameEn,
       String? commNameAr,
-      int? phoneNumbers,
+      dynamic phoneNumbers,
       String? username,
       Role? role});
 
@@ -98,7 +98,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
       phoneNumbers: freezed == phoneNumbers
           ? _value.phoneNumbers
           : phoneNumbers // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as dynamic,
       username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -135,7 +135,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String? secondname,
       String? commNameEn,
       String? commNameAr,
-      int? phoneNumbers,
+      dynamic phoneNumbers,
       String? username,
       Role? role});
 
@@ -185,7 +185,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
       phoneNumbers: freezed == phoneNumbers
           ? _value.phoneNumbers
           : phoneNumbers // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as dynamic,
       username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -224,7 +224,7 @@ class _$_User implements _User {
   @override
   final String? commNameAr;
   @override
-  final int? phoneNumbers;
+  final dynamic phoneNumbers;
   @override
   final String? username;
   @override
@@ -249,8 +249,8 @@ class _$_User implements _User {
                 other.commNameEn == commNameEn) &&
             (identical(other.commNameAr, commNameAr) ||
                 other.commNameAr == commNameAr) &&
-            (identical(other.phoneNumbers, phoneNumbers) ||
-                other.phoneNumbers == phoneNumbers) &&
+            const DeepCollectionEquality()
+                .equals(other.phoneNumbers, phoneNumbers) &&
             (identical(other.username, username) ||
                 other.username == username) &&
             (identical(other.role, role) || other.role == role));
@@ -258,8 +258,16 @@ class _$_User implements _User {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, firstname, secondname,
-      commNameEn, commNameAr, phoneNumbers, username, role);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      firstname,
+      secondname,
+      commNameEn,
+      commNameAr,
+      const DeepCollectionEquality().hash(phoneNumbers),
+      username,
+      role);
 
   @JsonKey(ignore: true)
   @override
@@ -282,7 +290,7 @@ abstract class _User implements User {
       final String? secondname,
       final String? commNameEn,
       final String? commNameAr,
-      final int? phoneNumbers,
+      final dynamic phoneNumbers,
       final String? username,
       final Role? role}) = _$_User;
 
@@ -299,7 +307,7 @@ abstract class _User implements User {
   @override
   String? get commNameAr;
   @override
-  int? get phoneNumbers;
+  dynamic get phoneNumbers;
   @override
   String? get username;
   @override

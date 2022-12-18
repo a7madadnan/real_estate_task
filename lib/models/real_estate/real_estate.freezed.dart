@@ -47,7 +47,7 @@ mixin _$RealEstate {
   BuildingComplex? get buildingComplex => throw _privateConstructorUsedError;
   String? get avenueName => throw _privateConstructorUsedError;
   String? get nearestPoint => throw _privateConstructorUsedError;
-  int? get expiresAt => throw _privateConstructorUsedError;
+  String? get expiresAt => throw _privateConstructorUsedError;
   int? get imagesCount => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
 
@@ -91,7 +91,7 @@ abstract class $RealEstateCopyWith<$Res> {
       BuildingComplex? buildingComplex,
       String? avenueName,
       String? nearestPoint,
-      int? expiresAt,
+      String? expiresAt,
       int? imagesCount,
       String? image});
 
@@ -259,7 +259,7 @@ class _$RealEstateCopyWithImpl<$Res, $Val extends RealEstate>
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       imagesCount: freezed == imagesCount
           ? _value.imagesCount
           : imagesCount // ignore: cast_nullable_to_non_nullable
@@ -380,7 +380,7 @@ abstract class _$$_RealEstateCopyWith<$Res>
       BuildingComplex? buildingComplex,
       String? avenueName,
       String? nearestPoint,
-      int? expiresAt,
+      String? expiresAt,
       int? imagesCount,
       String? image});
 
@@ -552,7 +552,7 @@ class __$$_RealEstateCopyWithImpl<$Res>
       expiresAt: freezed == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       imagesCount: freezed == imagesCount
           ? _value.imagesCount
           : imagesCount // ignore: cast_nullable_to_non_nullable
@@ -658,7 +658,7 @@ class _$_RealEstate implements _RealEstate {
   @override
   final String? nearestPoint;
   @override
-  final int? expiresAt;
+  final String? expiresAt;
   @override
   final int? imagesCount;
   @override
@@ -805,7 +805,7 @@ abstract class _RealEstate implements RealEstate {
       final BuildingComplex? buildingComplex,
       final String? avenueName,
       final String? nearestPoint,
-      final int? expiresAt,
+      final String? expiresAt,
       final int? imagesCount,
       final String? image}) = _$_RealEstate;
 
@@ -867,7 +867,7 @@ abstract class _RealEstate implements RealEstate {
   @override
   String? get nearestPoint;
   @override
-  int? get expiresAt;
+  String? get expiresAt;
   @override
   int? get imagesCount;
   @override
