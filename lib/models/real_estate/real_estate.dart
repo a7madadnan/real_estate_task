@@ -61,7 +61,7 @@ class RealEstate with _$RealEstate {
     BuildingComplex? buildingComplex,
     String? avenueName,
     String? nearestPoint,
-    int? expiresAt,
+    String? expiresAt,
     int? imagesCount,
     String? image,
   }) = _RealEstate;

@@ -12,7 +12,7 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       secondname: json['secondname'] as String?,
       commNameEn: json['commNameEn'] as String?,
       commNameAr: json['commNameAr'] as String?,
-      phoneNumbers: json['phoneNumbers'] as int?,
+      phoneNumbers: json['phoneNumbers'],
       username: json['username'] as String?,
       role: json['role'] == null
           ? null

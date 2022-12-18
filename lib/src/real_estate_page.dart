@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:riverpod_infinite_scroll/riverpod_infinite_scroll.dart';
 import 'package:untitled2/models/real_estate/real_estate.dart';
-import 'package:untitled2/widgets/myCard.dart';
+import 'package:untitled2/widgets/re_card.dart';
 import 'package:untitled2/src/real_estate_provider.dart';
 
 class RealEstatePage extends StatefulWidget {

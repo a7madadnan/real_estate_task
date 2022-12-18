@@ -50,7 +50,7 @@ _$_RealEstate _$$_RealEstateFromJson(Map<String, dynamic> json) =>
               json['buildingComplex'] as Map<String, dynamic>),
       avenueName: json['avenueName'] as String?,
       nearestPoint: json['nearestPoint'] as String?,
-      expiresAt: json['expiresAt'] as int?,
+      expiresAt: json['expiresAt'] as String?,
       imagesCount: json['imagesCount'] as int?,
       image: json['image'] as String?,
     );

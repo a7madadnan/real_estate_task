@@ -13,7 +13,7 @@ class User with _$User {
     String? secondname,
     String? commNameEn,
     String? commNameAr,
-    int? phoneNumbers,
+    dynamic phoneNumbers,
     String? username,
     Role? role,
   }) = _User;
