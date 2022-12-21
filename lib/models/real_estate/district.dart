@@ -1,6 +1,6 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:untitled2/models/real_estate/city.dart';
+import 'package:real_estate_task/models/real_estate/city.dart';
 
 part 'district.freezed.dart';
 part 'district.g.dart';

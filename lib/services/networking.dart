@@ -21,9 +21,6 @@ class NetworkHelper {
             "skip": pageNumber,
             "take": pageSize,
           });
-      if (kDebugMode) {
-        print(response.data);
-      }
       return response;
     } catch (e) {
       if (kDebugMode) {

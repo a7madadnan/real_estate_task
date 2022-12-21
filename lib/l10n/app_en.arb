@@ -1,0 +1,10 @@
+{
+  "language": "English",
+  "bedroom":"bedroom",
+  "bathroom":"bathroom",
+  "lvingroom":"livingroom",
+  "age":"age",
+  "area":"area",
+  "city":"city",
+  "realEstate":"Real Estate"
+}

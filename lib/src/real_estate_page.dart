@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:riverpod_infinite_scroll/riverpod_infinite_scroll.dart';
-import 'package:untitled2/models/real_estate/real_estate.dart';
-import 'package:untitled2/widgets/re_card.dart';
-import 'package:untitled2/src/real_estate_provider.dart';
+import 'package:real_estate_task/models/real_estate/real_estate.dart';
+import 'package:real_estate_task/widgets/re_card.dart';
+import 'package:real_estate_task/src/real_estate_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RealEstatePage extends StatefulWidget {
   const RealEstatePage({super.key});
-
   @override
   State<RealEstatePage> createState() => _RealEstatePageState();
 }
@@ -17,7 +17,7 @@ class _RealEstatePageState extends State<RealEstatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('task'),
+        title: Text(AppLocalizations.of(context)!.realEstate),
       ),
       body: RiverPagedBuilder<int, RealEstate>(
         firstPageKey: 0,
