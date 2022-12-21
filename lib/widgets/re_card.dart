@@ -1,7 +1,6 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:untitled2/models/real_estate/real_estate.dart';
-
+import 'package:real_estate_task/models/real_estate/real_estate.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../constants.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -10,9 +9,7 @@ class ReCard extends StatelessWidget {
     super.key,
     required this.realEstate,
   });
-
   final RealEstate realEstate;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,10 +29,11 @@ class ReCard extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: CachedNetworkImageProvider(realEstate.image!),
-                          fit: BoxFit.cover)),
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                        image: CachedNetworkImageProvider(realEstate.image!),
+                        fit: BoxFit.cover),
+                  ),
                 ),
                 Positioned(
                   top: 20,
@@ -46,13 +44,13 @@ class ReCard extends StatelessWidget {
                       color: Colors.white54,
                     ),
                     child: Text(
-                      realEstate.offerType?.getName(context) ?? '',
+                      realEstate.offerType!.getName(context),
                       style: kYTextStyle2,
                     ),
                   ),
                 ),
                 Positioned(
-                  top: 50,
+                  top: 40,
                   left: 20,
                   child: Container(
                     decoration: BoxDecoration(
@@ -79,8 +77,10 @@ class ReCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(3),
                           color: Colors.white54,
                         ),
-                        child:
-                            Text(realEstate.city!.name!, style: kYTextStyle2),
+                        child: Text(
+                          realEstate.city!.name!,
+                          style: kYTextStyle2,
+                        ),
                       ),
                     ],
                   ),
@@ -99,8 +99,10 @@ class ReCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(3),
                           color: Colors.white54,
                         ),
-                        child: Text(realEstate.price.toString(),
-                            style: kYTextStyle2),
+                        child: Text(
+                          realEstate.price.toString(),
+                          style: kYTextStyle2,
+                        ),
                       ),
                     ],
                   ),
@@ -113,17 +115,26 @@ class ReCard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Text('غرف النوم', style: kYTextStyle2),
+                Text(
+                  AppLocalizations.of(context)!.bedroom,
+                  style: kYTextStyle2,
+                ),
                 Text(
                   '${realEstate.nofBedrooms ?? 0}',
                   style: kYTextStyle3,
                 ),
-                const Text('غرف المعيشة', style: kYTextStyle2),
+                Text(
+                  AppLocalizations.of(context)!.lvingroom,
+                  style: kYTextStyle2,
+                ),
                 Text(
                   '${realEstate.nofLivingRooms ?? 0}',
                   style: kYTextStyle3,
                 ),
-                const Text('الحمامات', style: kYTextStyle2),
+                Text(
+                  AppLocalizations.of(context)!.bathroom,
+                  style: kYTextStyle2,
+                ),
                 Text(
                   '${realEstate.nofBathRooms ?? 0}',
                   style: kYTextStyle3,
@@ -141,10 +152,22 @@ class ReCard extends StatelessWidget {
                   style: kYTextStyle,
                   textAlign: TextAlign.center,
                 ),
-                const Text('العمر', style: kYTextStyle3),
-                Text('${realEstate.age ?? 0}', style: kYTextStyle),
-                const Text('المساحة', style: kYTextStyle3),
-                Text('${realEstate.area ?? 0}', style: kYTextStyle),
+                Text(
+                  AppLocalizations.of(context)!.age,
+                  style: kYTextStyle3,
+                ),
+                Text(
+                  '${realEstate.age ?? 0}',
+                  style: kYTextStyle,
+                ),
+                Text(
+                  AppLocalizations.of(context)!.area,
+                  style: kYTextStyle3,
+                ),
+                Text(
+                  '${realEstate.area ?? 0}',
+                  style: kYTextStyle,
+                ),
               ],
             ),
           ),
