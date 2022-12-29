@@ -23,6 +23,7 @@ class NetworkHelper {
           });
       return response;
     } catch (e) {
+    
       if (kDebugMode) {
         print(e);
       }
