@@ -9,7 +9,7 @@ const kYTextStyle2 = TextStyle(
 );
 const kYTextStyle3 = TextStyle(
   fontSize: 18,
-  color: Color(0xff035050),
+  color: Colors.teal,
 );
 
 class ApiDocument {

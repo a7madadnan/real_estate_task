@@ -6,5 +6,10 @@
   "age":"age",
   "area":"area",
   "city":"city",
-  "realEstate":"Real Estate"
+  "realEstate":"Real Estate",
+    "price":"price",
+    "userRole":"userRole",
+    "offerType":"offerType"
+
+  
 }

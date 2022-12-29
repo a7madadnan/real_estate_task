@@ -24,9 +24,18 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: L10n.all,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
+        theme:
+            ThemeData(primarySwatch: Colors.teal, brightness: Brightness.light),
+        darkTheme: ThemeData(
           primarySwatch: Colors.teal,
+          brightness: Brightness.dark,
+          cardColor: Colors.teal,
+          textTheme: const TextTheme(
+            bodyText1: TextStyle(color: Colors.white),
+            bodyText2: TextStyle(color: Colors.white),
+          ),
         ),
+        themeMode: ThemeMode.system,
         title: AppLocalizations.of(context)?.realEstate ?? "RealEstate",
         home: const RealEstatePage(),
       ),
